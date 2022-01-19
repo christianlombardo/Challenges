@@ -28,9 +28,6 @@ public class TextTwist {
 
     private static final int ALPHABET = 128;
 
-    // https://introcs.cs.princeton.edu/java/31datatype/TextTwist.java.html
-
-
     // return number of each character in the word
     public static int[] numOfEachChar(String s) {
         int[] wordCharsCount = new int[ALPHABET];
@@ -96,6 +93,8 @@ public class TextTwist {
         System.out.println(totalPoints(new String[]{"trance", "recant"}, "recant"));
         System.out.println(totalPoints(new String[]{"zooom", "moooz"}, "omooz"));
         System.out.println(totalPoints(new String[]{"ample", "pleam"}, "elmpa"));
+        System.out.println(totalPoints(new String[]{"dote", "dotes", "toes", "set", "dot", "dots", "sted"}, "tossed"));
+        System.out.println(totalPoints(new String[]{"cat", "create", "sat"}, "caster"));
 
     }
 }
