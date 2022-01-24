@@ -27,7 +27,7 @@ public class ValidatePIN {
      */
 
     public static boolean validate(String input) {
-        return input.matches("[0-9]{4}|[0-9]{6}");
+        return input != null ? input.matches("[0-9]{4}|[0-9]{6}") : false;
     }
 
 
@@ -49,5 +49,8 @@ public class ValidatePIN {
         input = "89abc1"; System.out.println(input + " " + validate(input));
         input = "900876"; System.out.println(input + " " + validate(input));
         input = " 4983"; System.out.println(input + " " + validate(input));
+        input = " "; System.out.println(input + " " + validate(input));
+        input = ""; System.out.println(input + " " + validate(input));
+        input = null; System.out.println(input + " " + validate(input));
     }
 }
