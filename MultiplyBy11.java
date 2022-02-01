@@ -20,7 +20,7 @@ public class MultiplyBy11 {
         Integer result;
 
         String input2 = input + "0";
-        String output = "";
+        StringBuilder output = new StringBuilder();
         Integer carryover = 0;
         Integer resultLength = 0;
         for (int i=input2.length()-1 ; i>=0 ; i--) {
@@ -28,10 +28,10 @@ public class MultiplyBy11 {
             resultLength = String.valueOf(result).length();
             carryover = resultLength == 1 ? 0 : Integer.parseInt(String.valueOf(result).substring(0,1));
             if (resultLength > 1) {
-                output = (i == 0 ? result : String.valueOf(result).substring(resultLength - 1, resultLength)) + output;
+                output.insert(0, i == 0 ? result : String.valueOf(result).substring(resultLength - 1, resultLength));
             }
             else {
-                output = result + output;
+                output.insert(0, result);
             }
         }
 
